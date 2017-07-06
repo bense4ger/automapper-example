@@ -17,13 +17,16 @@ namespace app
 
                 var service = new ApplicationService();
 
-                var foo = service.GetFooById(fooId);
+                /*var foo = service.GetFooById(fooId);
                 var bar = service.GetBarById(barId);
                 var fooBar = service.GetFooBarById(fooBarId);
 
                 Console.WriteLine(foo);
                 Console.WriteLine(bar);
-                Console.WriteLine(fooBar);
+                Console.WriteLine(fooBar);*/
+
+                var parent = service.GetParentById(Guid.NewGuid());
+                Console.WriteLine(parent);
 
                 Console.ReadKey();
             }

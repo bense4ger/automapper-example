@@ -34,5 +34,11 @@ namespace automapper.example.domain.services
             var fooBar = Repo.GetFooBarById(id);
             return fooBar.MapTo<FooBarModel>();
         }
+
+        public ParentModel GetParentById(Guid id)
+        {
+            var parent = Repo.GetComplexNested(id);
+            return parent.MapTo<ParentModel>();
+        }
     }
 }

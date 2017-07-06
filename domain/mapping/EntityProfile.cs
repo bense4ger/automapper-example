@@ -12,6 +12,9 @@ namespace automapper.example.domain.mapping
             CreateMap<Bar, BarModel>()
                 .ForMember(dest => dest.Age, opts => opts.ResolveUsing<AgeResolver>());
             CreateMap<FooBar, FooBarModel>();
+
+            CreateMap<Child, ChildModel>();
+            CreateMap<Parent, ParentModel>();
         }
     }
 }

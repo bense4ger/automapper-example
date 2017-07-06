@@ -38,5 +38,14 @@ namespace automapper.example.data.repositories
                 Bar = bar
             };
         }
+
+        public Parent GetComplexNested(Guid id)
+        {
+            var someParent = new Parent { Id = Guid.NewGuid(), Child = null };
+            var child = new Child { Id = Guid.NewGuid(), AParent = someParent };
+            var parent = new Parent { Id = id, Child = child };
+
+            return parent;
+        }
     }    
 }
