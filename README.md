@@ -1,3 +1,3 @@
-#AutoMapper Example
+# AutoMapper Example
 
-A really, really simple example of how to implement automapper
+A really, really simple example of how to implement automapper.
